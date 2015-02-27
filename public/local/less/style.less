@@ -1,3 +1,4 @@
+@import "vars.less";
 body {
   background: url("/images/bg.png") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -34,6 +35,11 @@ p {
 #lewd-subtext {
   font-size: 20pt;
 }
+
+.danger-text {
+ color: @text-color-danger;  
+}
+
 #tweet-form {
   #tweet-text {
     width: 65%;
@@ -46,9 +52,23 @@ p {
     -moz-border-radius: 20px;
     border-radius: 20px;
   }
+  
+  #lou-ify {
+    font-size: 24pt;
+    font-family: 'Lobster';
+    margin: 5px;
+    
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  
   #tweet-submit {
     font-size: 24pt;
     font-family: 'Lobster';
+    margin: 5px;
     
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
