@@ -6,7 +6,7 @@ $(function() {
         $('#tweet-icon').toggleClass('hidden');
         $('#wait-icon').toggleClass('hidden');
         var tweetText = $('#tweet-text').val();
-            //post to server to tweet
+        //post to server to tweet
         $.post("/api/tweet", {
             tweet: tweetText
         }, function(data) {
@@ -17,22 +17,24 @@ $(function() {
             else {
                 //Everything is fine
                 toastr["success"]("That was a sweet tweet", "Nice!")
+                $('#tweet-text').val('');
+                $('#char-count').text('140');
+
             }
             $('#tweet-icon').toggleClass('hidden');
             $('#wait-icon').toggleClass('hidden');
-            $('#tweet-text').val('');
-            $('#char-count').text('140');
+
         });
 
     });
-    
-    
+
+
     $('#tweet-text').bind('input propertychange', function() {
-        var text =  $('#tweet-text').val();
+        var text = $('#tweet-text').val();
         var n = text.length;
-        var left = 140-n;
-        if (left < 0){
-            text = text.substring(0,140);
+        var left = 140 - n;
+        if (left < 0) {
+            text = text.substring(0, 140);
             $('#tweet-text').val(text);
             left = 0;
         }
