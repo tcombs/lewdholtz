@@ -14,7 +14,7 @@ $(function() {
                 //There was an error
                 toastr["error"]("Something went wrong. I'll blame Twitter.", "Opps!")
                 updateText();
-                console.log(err);
+                console.log(data.err);
             }
             else {
                 //Everything is fine
