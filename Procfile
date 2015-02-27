@@ -1,1 +1,1 @@
-web: cd lewdholtz/ && npm start
+web: npm start
