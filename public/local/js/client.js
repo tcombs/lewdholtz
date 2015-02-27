@@ -49,18 +49,12 @@ $(function() {
         updateText();
     });
 
-    //code for copy to clipboard
-    var zeroClient = new ZeroClipboard($('.trend'));
-    zeroClient.on("ready", function(readyEvent) {
-        // alert( "ZeroClipboard SWF is ready!" );
+  
 
-        zeroClient.on("aftercopy", function(event) {
-            toastr["info"](event.data["text/plain"] + " copied to clipboard!")
-            
-        });
+    $('.trend').on('click',function(){
+        $('#tweet-text').val($('#tweet-text').val() + ' ' +  $(this).attr('name'));
+        updateText();
     });
-
-
 
 
 
