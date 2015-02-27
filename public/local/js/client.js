@@ -17,7 +17,7 @@ $(function() {
             }
             else {
                 //Everything is fine
-                toastr["success"]("That was a sweet tweet", "Nice!")
+                toastr["success"]("That was a bitching tweet", "Nice!")
                 $('#tweet-text').val('');
                 updateText();
 
