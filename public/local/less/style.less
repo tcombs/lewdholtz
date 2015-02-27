@@ -23,6 +23,11 @@ p {
 .width80 {
   width: 80%;
 }
+.trend {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 12pt;
+}
 #char-sent {
   font-size: 24pt;
 }
@@ -36,16 +41,14 @@ p {
     }
   }
 }
-#lewd-subtext {
-  font-size: 20pt;
-}
 .danger-text {
   color: @text-color-danger;
 }
 #tweet-form {
   #tweet-text {
     width: 65%;
-    font-family: 'Ubuntu', sans-serif;;
+    font-family: 'Ubuntu', sans-serif;
+    ;
     font-size: 20pt;
     height: 215px;
     padding: 15px;
@@ -60,6 +63,7 @@ p {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    border-bottom: solid #449d44 3px;
   }
   #tweet-submit {
     font-size: 24pt;
@@ -68,6 +72,7 @@ p {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    border-bottom: solid rgb(40, 96, 144) 3px;
   }
 }
 ////////// MEDIA LOW RES IPHONE THIONGS //////
@@ -75,8 +80,10 @@ p {
   #lewd-header {
     font-size: 40pt;
   }
-  #lewd-subtext {
-    font-size: 10pt;
+  .trend {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 12pt;
   }
   #tweet-form {
     #tweet-text {

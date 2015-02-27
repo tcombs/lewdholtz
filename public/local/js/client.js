@@ -12,13 +12,13 @@ $(function() {
         }, function(data) {
             if (data.err) {
                 //There was an error
-                toastr["error"]("Something went wrong. I'll blame Twitter.", "Opps!")
+                toastr["error"]("Something went wrong. I'll blame Twitter.", "Opps!");
                 updateText();
                 console.log(data.err);
             }
             else {
                 //Everything is fine
-                toastr["success"]("That was a bitching tweet", "Nice!")
+                toastr["success"]("That was a bitching tweet", "Nice!");
                 $('#tweet-text').val('');
                 updateText();
 
@@ -29,8 +29,8 @@ $(function() {
         });
 
     });
-    
-    $('#lou-ify').on('click',function(){
+
+    $('#lou-ify').on('click', function() {
         var text = $('#tweet-text').val();
         text = text.replace(/s/g, 'th');
         text = text.replace(/S/g, 'Th');
@@ -48,8 +48,23 @@ $(function() {
     $('#tweet-text').bind('input propertychange', function() {
         updateText();
     });
-    
-    var updateText = function(){
+
+    //code for copy to clipboard
+    var zeroClient = new ZeroClipboard($('.trend'));
+    zeroClient.on("ready", function(readyEvent) {
+        // alert( "ZeroClipboard SWF is ready!" );
+
+        zeroClient.on("aftercopy", function(event) {
+            toastr["info"](event.data["text/plain"] + " copied to clipboard!")
+            
+        });
+    });
+
+
+
+
+
+    var updateText = function() {
         var text = $('#tweet-text').val();
         var n = text.length;
         var left = 140 - n;
@@ -59,7 +74,7 @@ $(function() {
             //disabled == true
             $('#tweet-submit').prop('disabled', true);
         }
-        else{
+        else {
             //set to normal color
             $('#char-sent').removeClass('danger-text');
             //disabled == false

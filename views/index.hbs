@@ -1,16 +1,35 @@
 <h1 id='lewd-header' class='center'><a target="_blank" href='https://twitter.com/LewdHoltz' id='lewd-header-a'>@LewdHoltz</a></h1>
-<h4 class='center' id='lewd-subtext'>"My ballsh have been dethlated for yearsh"</h4>
+
+
 <div class='container'>
 
 
     <div class='center'>
+
+        {{#if trends}}
+        <div id='trends' class='boo'>
+            <h3>Try These:</h3>
+            {{#each trends}}
+            <button type='button' 
+            name='{{this.name}}' 
+            query='{{this.query}}' 
+            url='{{this.url}}' 
+            promoted='{{this.promoted_content}}' 
+            data-clipboard-text="{{this.name}}"
+            class='btn btn-default trend'>{{this.name}}</button>
+            {{/each}}
+        </div>
+        {{/if}}
+
+
         <form id='tweet-form'>
             <div class="form-group">
                 <textarea id='tweet-text'></textarea>
             </div>
             <p id='char-sent'><span id='char-count'>140</span> characters left ...</p>
             <div>
-                <div class="btn btn-success" id="lou-ify">Lou-ify! <i class="fa fa-comments"></i></div>
+                <div class="btn btn-success" id="lou-ify">Lou-ify! <i class="fa fa-comments"></i>
+                </div>
                 <button type="submit" class="btn btn-primary" id='tweet-submit'>Tweet it!
                     <span id=tweet-icon><i class="fa fa-twitter"></i></span>
                     <span id="wait-icon" class="hidden"><i class="fa fa-spinner fa-pulse"></i></span>
