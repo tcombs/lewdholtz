@@ -1,6 +1,5 @@
 $(function() {
 
-    $('#tweet-text').val('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.');
 
     $('#tweet-form').submit(function(e) {
         e.preventDefault();
@@ -22,6 +21,7 @@ $(function() {
             $('#tweet-icon').toggleClass('hidden');
             $('#wait-icon').toggleClass('hidden');
             $('#tweet-text').val('');
+            $('#char-count').text('140');
         });
 
     });
