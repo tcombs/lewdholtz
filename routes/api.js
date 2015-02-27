@@ -19,7 +19,9 @@ router.post('/tweet', function(req, res) {
   var data = req.body;
   twitter.post('statuses/update', {
     status: data.tweet
-  }, function(err, data, response) {});
+  }, function(err, data, response) {
+    res.send({err:err, data:data});
+  });
 });
 
 module.exports = router;
