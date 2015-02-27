@@ -28,6 +28,13 @@ p {
 }
 #lewd-header {
   font-size: 90pt;
+  #lewd-header-a {
+    color: @link-color;
+    &:hover {
+      text-decoration: none;
+      color: @link-color-hover;
+    }
+  }
 }
 #lewd-subtext {
   font-size: 20pt;
@@ -38,6 +45,7 @@ p {
 #tweet-form {
   #tweet-text {
     width: 65%;
+    font-family: 'Ubuntu', sans-serif;;
     font-size: 20pt;
     height: 215px;
     padding: 15px;
@@ -62,9 +70,6 @@ p {
     border-radius: 10px;
   }
 }
-
-
-
 ////////// MEDIA LOW RES IPHONE THIONGS //////
 @media (max-width: 800px) {
   #lewd-header {
@@ -73,38 +78,34 @@ p {
   #lewd-subtext {
     font-size: 10pt;
   }
-
-  
-  
   #tweet-form {
-  #tweet-text {
-    width: 100%;
-    font-size: 16pt;
-    height: 215px;
-    padding: 15px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    #tweet-text {
+      width: 100%;
+      font-size: 16pt;
+      height: 215px;
+      padding: 15px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    #lou-ify {
+      font-size: 19pt;
+      font-family: 'Lobster';
+      margin: 5px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    #tweet-submit {
+      font-size: 19pt;
+      font-family: 'Lobster';
+      margin: 5px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    #char-sent {
+      font-size: 16pt;
+    }
   }
-  #lou-ify {
-    font-size: 19pt;
-    font-family: 'Lobster';
-    margin: 5px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-  }
-  #tweet-submit {
-    font-size: 19pt;
-    font-family: 'Lobster';
-    margin: 5px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-  }
-  
-  #char-sent{
-    font-size: 16pt;
-  }
-}
 }

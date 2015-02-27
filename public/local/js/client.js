@@ -36,6 +36,10 @@ $(function() {
         text = text.replace(/S/g, 'Th');
         text = text.replace(/z/g, 'th');
         text = text.replace(/Z/g, 'Th');
+        text = text.replace(/ce/g, 'th');
+        text = text.replace(/Ce/g, 'Th');
+        text = text.replace(/CE/g, 'TH');
+        text = text.replace(/thth/g, 'theth');
         $('#tweet-text').val(text);
         updateText();
     });
