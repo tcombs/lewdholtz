@@ -9,7 +9,6 @@ body {
 .center {
   text-align: center;
 }
-
 h1,
 h2,
 h3,
@@ -24,54 +23,88 @@ p {
 .width80 {
   width: 80%;
 }
-
 #char-sent {
   font-size: 24pt;
 }
-
 #lewd-header {
   font-size: 90pt;
 }
 #lewd-subtext {
   font-size: 20pt;
 }
-
 .danger-text {
- color: @text-color-danger;  
+  color: @text-color-danger;
 }
-
 #tweet-form {
   #tweet-text {
     width: 65%;
     font-size: 20pt;
     height: 215px;
     padding: 15px;
-    
-    
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
   }
-  
   #lou-ify {
     font-size: 24pt;
     font-family: 'Lobster';
     margin: 5px;
-    
-    
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
   }
-  
-  
   #tweet-submit {
     font-size: 24pt;
     font-family: 'Lobster';
     margin: 5px;
-    
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
   }
+}
+
+
+
+////////// MEDIA LOW RES IPHONE THIONGS //////
+@media (max-width: 800px) {
+  #lewd-header {
+    font-size: 40pt;
+  }
+  #lewd-subtext {
+    font-size: 10pt;
+  }
+
+  
+  
+  #tweet-form {
+  #tweet-text {
+    width: 100%;
+    font-size: 16pt;
+    height: 215px;
+    padding: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  #lou-ify {
+    font-size: 19pt;
+    font-family: 'Lobster';
+    margin: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  #tweet-submit {
+    font-size: 19pt;
+    font-family: 'Lobster';
+    margin: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  #char-sent{
+    font-size: 16pt;
+  }
+}
 }
