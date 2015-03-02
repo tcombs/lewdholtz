@@ -20,8 +20,36 @@ router.post('/tweet', function(req, res) {
   twitter.post('statuses/update', {
     status: data.tweet
   }, function(err, data, response) {
-    res.send({err:err, data:data});
+    res.send({
+      err: err,
+      data: data
+    });
   });
+});
+
+
+router.post('/users', function(req, res, next) {
+  console.log(req.body);
+  var term = req.body.term;
+  twitter.get('users/search', {
+    q: term,
+    page: 1,
+    count: 5
+  }, function(err, data, response) {
+    var users = [];
+    //screen_name
+    if(data)
+    {
+      for(var i in data){
+        users.push(data[i].screen_name);
+      }
+    }
+    
+    res.send({
+      users: users
+    });
+  });
+
 });
 
 module.exports = router;

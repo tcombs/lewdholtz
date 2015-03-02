@@ -39,7 +39,7 @@ $(function() {
         text = text.replace(/ce/g, 'th');
         text = text.replace(/Ce/g, 'Th');
         text = text.replace(/CE/g, 'TH');
-        text = text.replace(/thth/g, 'theth');
+        text = text.replace(/thth/g, 'thth');
         $('#tweet-text').val(text);
         updateText();
     });
@@ -49,12 +49,39 @@ $(function() {
         updateText();
     });
 
-  
 
-    $('.trend').on('click',function(){
-        $('#tweet-text').val($('#tweet-text').val() + ' ' +  $(this).attr('name'));
+
+    $('.trend').on('click', function() {
+        $('#tweet-text').val($('#tweet-text').val() + ' ' + $(this).attr('name'));
         updateText();
     });
+
+    //AutoComplete
+
+    $('#tweet-text').textcomplete([{ // emoji strategy
+        match: /\B@(\w*)$/,
+        words: ['apple', 'google', 'facebook', 'github'],
+        search: function(term, callback) {
+            //search api for term
+            $.post('/api/users', {
+                term: term
+            }, function(data) {
+                //we gots data
+                var users = data.users;
+                callback($.map(users, function(word) {
+                    //return word.indexOf(term) === 0 ? word : null;
+                    return word;
+                }));
+            });
+
+
+
+        },
+        replace: function(value) {
+            return '@' + value + ' ';
+        },
+        index: 1
+    }]);
 
 
 

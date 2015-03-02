@@ -1,0 +1,14 @@
+{
+  "name": "jquery-overlay",
+  "homepage": "https://github.com/yuku-t/jquery-overlay",
+  "_release": "98d825811b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "98d825811bfddaf4ff3d011fe6d225a9726c134d"
+  },
+  "_source": "https://github.com/yuku-t/jquery-overlay.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/yuku-t/jquery-overlay.git",
+  "_direct": true
+}
