@@ -31,10 +31,12 @@ router.post('/tweet', function(req, res) {
 router.post('/users', function(req, res, next) {
   console.log(req.body);
   var term = req.body.term;
+  term = '@' + term;
+  console.log(term);
   twitter.get('users/search', {
     q: term,
     page: 1,
-    count: 5
+    count: 7
   }, function(err, data, response) {
     var users = [];
     //screen_name
